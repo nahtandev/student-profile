@@ -1,0 +1,264 @@
+/* import bootstrap icons */
+@import "../icons/bootstrap-icons/font/bootstrap-icons.css";
+
+/* import Fonts. Fonts is in assets folder */
+@font-face {
+    font-family: Rotunda-Light;
+    src: url(../fonts/Rotunda/Rotunda-Light.otf);
+}
+@font-face {
+    font-family: Rotunda-Medium;
+    src: url(../fonts/Rotunda/Rotunda-Medium.otf);
+}
+@font-face {
+    font-family: Rotunda-Regular;
+    src: url(../fonts/Rotunda/Rotunda-Regular.otf);
+}
+@font-face {
+    font-family: Rotunda-Medium;
+    src: url(../fonts/Rotunda/Rotunda-Medium.otf);
+}
+@font-face {
+    font-family: Rotunda-Bold;
+    src: url(../fonts/Rotunda/Rotunda-Bold.otf);
+}
+@font-face {
+    font-family: MazzardH-Bold;
+    src: url(../fonts/Mazzard/MazzardH-Bold.otf);
+}
+
+/* Custom CSS BootStrap Properties */
+.d-flex{
+    display: flex;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+ .justify-content-around{
+    justify-content: space-around;
+}
+
+.justify-content-end{
+    justify-content: flex-end;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.align-items-start{
+    align-items: flex-start;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.align-items-baseline{
+    align-items: baseline;
+}
+
+.align-items-end{
+    align-items: flex-end;
+}
+
+.align-self-end{
+    align-self: flex-end;
+}
+
+.align-self-start{
+    align-self: flex-start;
+}
+
+.align-self-center{
+    align-self: center;
+}
+
+.justify-self-start{
+    justify-self: flex-start;
+}
+
+.justify-self-center{
+    justify-self: center;
+}
+
+.align-content-center{
+    align-content: center;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.width-100p{
+    width: 100%;
+}
+
+.width-50p{
+    width: 50%;
+}
+
+.center-bloc{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.font-weight-bold{
+    font-weight: bold   ;
+}
+
+.font-style-italic{
+    font-style: italic;
+}
+
+
+/* CSS */
+body{
+    font-family: Rotunda-Light;
+
+}
+
+.body{
+    height: 600px;
+    width: 750px;   
+    background: linear-gradient(
+        to bottom right,
+        #FF0668 0%,
+        #810335 50%
+    );
+}
+
+.main-bloc{
+    background: #fff;
+    height: 90%;
+    width: 80%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header-title{
+    font-family: MazzardH-Bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.header-info{
+    font-family: Rotunda-Regular;
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+
+.btn-bloc{
+    background: #F5F8FF;
+    height: 53px;
+}
+
+.btn{
+    width: 50%;
+    background: #F5F8FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Rotunda-Bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #707070;
+    cursor: pointer;
+    transition: border 0.1s ease-in;
+}
+
+.btn-add-student{
+    border-right: 1px solid #707070;
+}
+
+.btn-active{
+    transition: border 0.1s ease-in-out;
+    border-bottom: 4px solid #603EDA;
+    color: #603EDA;
+}
+
+.bloc-content{
+    height: 370px;
+    width: 100%;
+    
+}
+
+.iframe{
+    width: 100%;
+    height: 100%;
+}
+
+::-webkit-scrollbar{
+    width: 17px;
+    height: 60px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow:  inset 0px 0px 5px rgb(0, 0, 0, 0.09);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+
+::-webkit-scrollbar-thumb{
+    background: #603EDA;
+    border-radius: 60px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #603EDA;
+    border-radius: 60px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+
+a{
+    text-decoration: none;
+    color: #603EDA;
+}
+
+/* Media Queries CSS  */
+@media only screen and (max-width: 360px){
+     .body{
+        height: 640px;
+        width: 360px; 
+     }
+     .main-bloc{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+     .header-info{
+        margin-bottom: 10px;
+     }
+     .btn-bloc{
+        background: #F5F8FF;
+        height: 50px;
+        width: 300px;
+    }
+
+    .bloc-content{
+        height: 450px;
+        width: 100%;
+        
+        
+    }
+
+}

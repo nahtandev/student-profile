@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Student Profile</title>
+</head>
+
+<body class="center-bloc d-flex justify-content-center align-items-center">
+    <div class="body d-flex justify-content-center align-items-center">
+        <div class="main-bloc">
+            <div>
+                <div class="header-title">Student Registration</div>
+                <div class="header-info">Let's create your profile</div>
+            </div>
+            <div class="d-flex btn-bloc">
+                <a href="/register" data-link id="btn-add-student" class="btn btn-add-student">Add
+                    Student</a>
+                <a href="/all-student" data-link id="btn-all-student"
+                    class="btn btn-all-student">All Student</a>
+            </div>
+            <div id="bloc-content" class="bloc-content">
+                <!-- Here is the block that will display the other pages in order 
+                    to maintain the Single Page Application -->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Home</title>
+    <!-- CSS -->
+    <style>
+        .bloc-main {
+            text-align: center;
+            overflow: hidden;
+            -webkit-backface-visibility: hidden;
+            -webkit-perspective: 1000;
+            -webkit-transform: translate3d(0, 0, 0);
+        }
+        .bi-arrow-90deg-up {
+            font-size: 102px;
+            font-weight: bold;
+            background: -webkit-linear-gradient(#603EDA 0%, #FF0668 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .welcome-text {
+            font-family: MazzardH-Bold;
+            font-size: 25px;
+            font-weight: bold;
+            margin-left: -50px;
+        }
+
+        /* Animation */
+        div {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .bi-arrow-90deg-up {
+            animation: showup 10s infinite;
+        }
+        .welcome-text {
+            width: 0px;
+            animation: reveal 10s infinite;
+        }
+        @keyframes showup {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        @keyframes slidein {
+            0% { margin-left: -800px; }
+            20% { margin-left: -800px; }
+            35% { margin-left: 0px; }
+            100% { margin-left: 0px; }
+        }
+        @keyframes reveal {
+            0% { opacity: 0; width: 0px; }
+            20% { opacity: 1; width: 0px; }
+            30% { width: 355px; }
+            80% { opacity: 1; }
+            100% { opacity: 0; width: 355px; }
+        }
+
+        /* Media Queries CSS  */
+        @media only screen and (max-width: 360px) {
+            .bi-arrow-90deg-up {
+                font-size: 50px;
+            }
+            .welcome-text {
+                font-size: 20px;
+                padding: 0%;
+                margin-left: 0px;
+            }
+            .bloc-main {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bloc-main center-bloc d-flex justify-content-center align-items-center" style="">
+        <div class="bi-arrow-90deg-up"></div>
+        <div class="welcome-text">Hello 👋 Click to start...</div>
+    </div>
+</body>
+
+</html>

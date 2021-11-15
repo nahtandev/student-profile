@@ -1,0 +1,12 @@
+{
+  "name": "student_profile",
+  "version": "1.0.0",
+  "description": "A app to create profile for students",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "i_am_nathan",
+  "license": "ISC"
+}

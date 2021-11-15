@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Student</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- CSS -->
+    <style>
+        body {
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .one-student {
+            width: 450px;
+            height: 140;
+            box-shadow: 0px 0px 10px #707070;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            padding: 15px;
+        }
+        .one-student:hover {
+            box-shadow: 0px 0px 30px #603EDA;
+            cursor: pointer;
+            transform-origin: 0% 0%;
+            transform: translate(0, 5px);
+            transition: all 0.3s ease;
+        }
+        .bi-person-circle {
+            width: 75px;
+            height: 75px;
+            font-size: 75px;
+            color: #707070;
+        }
+        .bio {
+            width: 300px;
+            line-height: 25px;
+        }
+        .last-name,
+        .university,
+        .contact {
+            font-family: Rotunda-Bold;
+        }
+        .contact {
+            margin-top: 3px;
+        }
+        /* No data message */
+        .no-data-message-bloc{
+            display: none;
+            margin-top: 25%;
+        }
+        .no-data-message{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .bi-x-circle{
+            font-size: 50px;
+            color: #603EDA;
+            margin-right: 30px;
+        }
+
+
+        /* Media Queries CSS  */
+        @media only screen and (max-width: 500px) {
+            .one-student {
+                width: 250px;
+                height: 200px;
+                flex-direction: column;
+                font-size: 12px;
+                padding: 5px;
+            }
+            .bi-person-circle {
+                font-size: 60px;
+                margin-top: 10px;
+            }
+            .bio {
+                width: 230px;
+            }
+
+            /* No data message */
+            .no-data-message-bloc{
+                margin-top: 50%;
+            }
+            .no-data-message{
+                font-size: 15px;
+                text-align: left;
+            }
+            .bi-x-circle{
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column justify-content-center align-items-center">
+    
+    <div class="no-data-message-bloc d-flex justify-content-center align-items-center">
+        <span class="bi-x-circle"></span>
+        <span class="no-data-message"> No Data Disponible. Try to add. </span>
+    </div>
+
+    <script src="/assets/views/ViewAllProfile.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

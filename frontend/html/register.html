@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- CSS -->
+    <style>
+        .info {
+            font-family: Rotunda-Regular;
+            font-size: 14px;
+            color: #707070;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        .main {
+            border: 1px solid red;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Forms CSS */
+        input {
+            font-family: Rotunda-Regular;
+            font-size: 14px;
+            color: #000;
+        }
+        input[type=text],
+        input[type=number],
+        input[type=email],
+        input[type=tel] {
+            border: none;
+            border-bottom: 1px solid #4E4E4E;
+            transition: border 0.6s ease-in;
+            margin-bottom: 30px;
+        }
+        input[type=text]:focus,
+        input[type=number]:focus,
+        input[type=email]:focus,
+        input[type=tel]:focus {
+            outline: none;
+            transition: border 0.6s ease-in-out;
+            border-bottom: 1px solid #603EDA;
+        }
+        #first-name,
+        #last-name,
+        #age,
+        #university {
+            width: 47.4%;
+        }
+        #first-name,
+        #age {
+            margin-right: 10px;
+        }
+        #email,
+        #phone {
+            width: 97%;
+        }
+        /* button style */
+        .submit {
+            text-align: center;
+            position: relative;
+            width: 200px;
+            text-align: center;
+            transition-duration: 0.4s;
+            overflow: hidden;
+            box-shadow: 0 5px 15px #603EDA;
+            border-radius: 4px;
+            width: 130px;
+            height: 40px;
+            background: #603EDA;
+            border: none;
+            border-radius: 21px;
+            color: #fff;
+            font-family: Rotunda-Medium;
+            font-size: 15px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+        .submit:hover {
+            box-shadow: 0px 2px 15px 3px #603EDA;
+        }
+        .submit:after {
+            content: "";
+            background: #fff;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 250%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            border-radius: 21px;
+            transition: all 2s
+        }
+        .submit:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+
+        .submit:focus {
+            outline: 0;
+        }
+        .margin-bottom-10px {
+            margin-bottom: 10px;
+        }
+
+        /* Media Queries CSS  */
+        @media only screen and (max-width: 530px) {
+            #first-name,
+            #last-name,
+            #age,
+            #university {
+                width: 95%;
+            }
+            #email,
+            #phone {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="center-bloc">
+    <div class="">
+        <div class="info">Enter your detail below</div>
+        <form action="/save" method="POST" class="d-flex flex-column">
+            <div class="margin-bottom-10px">
+                <input type="text" name="firstName" id="first-name" placeholder="First Name" required>
+                <input type="text" name="lastName" id="last-name" placeholder="Last Name" required>
+            </div>
+            <input type="email" name="email" id="email" placeholder="Email" required class="margin-bottom-10px">
+            <div class="margin-bottom-10px">
+                <input type="number" name="age" id="age" placeholder="Age" required>
+                <input type="text" name="university" id="university" placeholder="University" required>
+            </div>
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+            <button id="submit" class="submit align-self-center" type="submit">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>

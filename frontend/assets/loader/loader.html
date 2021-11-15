@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>is Loading...</title>
+    <!-- CSS -->
+    <style>
+        /* Custom Fonts */
+        @font-face {
+            font-family: MazzardH-Bold;
+            src: url(MazzardH-Bold.otf);
+        }
+
+        /* Loading Bloc */
+        .loading-bloc {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Loading Text */
+        .loading-text {
+            margin-right: 20px;
+            font-family: MazzardH-Bold;
+            font-size: 25px;
+        }
+
+
+        /* Main Circle*/
+        .circle {
+            /* Size & Border */
+            width: 30px;
+            height: 30px;
+            border: 5px solid #D2DDF9;
+            border-radius: 50%;
+
+            /* Animation */
+            -webkit-animation: spin 2s linear infinite;
+            -o-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+            margin-top: 10px;
+        }
+
+        /* Loading */
+        .loading {
+            width: 5px;
+            height: 5px;
+            background-color: #603EDA;
+            border-radius: 50%;
+            position: absolute;
+            right: 0px;
+        }
+
+        /*Rotate Effect*/
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading-bloc">
+        <div class="loading-text">Loading...</div>
+        <div class="circle">
+            <div class="loading">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
